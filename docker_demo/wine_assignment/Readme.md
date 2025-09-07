@@ -1,0 +1,1 @@
+# Note: This directory doesn't contain training code. We are using the trained models for creating FastAPI application, Docker files/ Images.
