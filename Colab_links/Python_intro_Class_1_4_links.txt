@@ -7,3 +7,9 @@ Pytest: Session 13
 
 https://colab.research.google.com/drive/1GWlUdzvwAsJ-xw18ggK4hJrWjiZ7NWHs?usp=sharing
 
+
+
+Session 19: WHYLABS
+
+https://colab.research.google.com/drive/10wO0asCF6gJZgRPJoq1D8VhyW7t8Jr_7?usp=sharing
+
