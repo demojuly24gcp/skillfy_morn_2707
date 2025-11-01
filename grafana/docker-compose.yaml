@@ -1,15 +1,21 @@
-version: '3.8'
-
 services:
+  mlapp:
+    build: ./ml_app
+    container_name: mlapp
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
-    ports:
-      - "9090:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
-    networks:
-      - monitoring
+    ports:
+      - "9090:9090"
+    depends_on:
+      - mlapp
 
   grafana:
     image: grafana/grafana:latest
@@ -18,13 +24,3 @@ services:
       - "3000:3000"
     depends_on:
       - prometheus
-    volumes:
-      - grafana-storage:/var/lib/grafana
-    networks:
-      - monitoring
-
-networks:
-  monitoring:
-
-volumes:
-  grafana-storage:
